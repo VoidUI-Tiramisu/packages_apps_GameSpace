@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.crdroid.settings.preferences;
+package com.android.settings.custom.preference;
 
 import android.content.Context;
 import androidx.preference.ListPreference;

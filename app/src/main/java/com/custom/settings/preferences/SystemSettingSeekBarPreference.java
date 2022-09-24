@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016-2022 crDroid Android Project
+ * Copyright (C) 2016-2019 crDroid Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,31 +13,25 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.crdroid.settings.preferences;
+package com.android.settings.custom.preference;
 
 import android.content.Context;
-import android.provider.Settings;
-import android.os.UserHandle;
 import android.util.AttributeSet;
 
-import com.android.settingslib.widget.MainSwitchPreference;
+public class SystemSettingSeekBarPreference extends CustomSeekBarPreference {
 
-import com.crdroid.settings.preferences.SystemSettingsStore;
-
-public class SystemSettingMainSwitchPreference extends MainSwitchPreference {
-
-    public SystemSettingMainSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
+    public SystemSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingMainSwitchPreference(Context context, AttributeSet attrs) {
+    public SystemSettingSeekBarPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingMainSwitchPreference(Context context) {
-        super(context);
+    public SystemSettingSeekBarPreference(Context context) {
+        super(context, null);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 }

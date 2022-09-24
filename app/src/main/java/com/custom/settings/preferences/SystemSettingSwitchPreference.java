@@ -13,42 +13,41 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.crdroid.settings.preferences;
+package com.android.settings.custom.preference;
 
 import android.content.Context;
 import android.provider.Settings;
 import android.os.UserHandle;
 import android.util.AttributeSet;
 
-import lineageos.preference.SelfRemovingSwitchPreference;
+import androidx.preference.SwitchPreference;
 
-public class SystemSettingSwitchPreference extends SelfRemovingSwitchPreference {
+public class SystemSettingSwitchPreference extends SwitchPreference {
 
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     public SystemSettingSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     public SystemSettingSwitchPreference(Context context) {
         super(context);
+
+        setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
     @Override
-    protected boolean isPersisted() {
-        return Settings.System.getString(getContext().getContentResolver(), getKey()) != null;
-    }
-
-    @Override
-    protected void putBoolean(String key, boolean value) {
-        Settings.System.putIntForUser(getContext().getContentResolver(), key, value ? 1 : 0, UserHandle.USER_CURRENT);
-    }
-
-    @Override
-    protected boolean getBoolean(String key, boolean defaultValue) {
-        return Settings.System.getIntForUser(getContext().getContentResolver(),
-                key, defaultValue ? 1 : 0, UserHandle.USER_CURRENT) != 0;
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        // This is what default TwoStatePreference implementation is doing without respecting
+        // real default value:
+        //setChecked(restoreValue ? getPersistedBoolean(mChecked)
+        //        : (Boolean) defaultValue);
+        // Instead, we better do
+        setChecked(restoreValue ? getPersistedBoolean((Boolean) defaultValue)
+                : (Boolean) defaultValue);
     }
 }
