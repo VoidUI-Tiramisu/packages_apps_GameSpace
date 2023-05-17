@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2021 Chaldeaprjkt
+                   2022 crDroid Android Project
+                   2022 VoidUI Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="settings_summary">अपना गेमिंग सेटअप प्रबंधित करें</string>
+    <!-- Game options -->
+    <string name="in_game_preferences_title">इन-गेम विकल्प</string>
+    <string name="suppress_fullscreen_intent_title">फ़ुलस्क्रीन इवेंट को ब्लॉक करें</string>
+    <string name="suppress_fullscreen_intent_summary">इनकमिंग कॉल जैसे फ़ुलस्क्रीन इवेंट को दिखने से रोकें</string>
+    <string name="stay_awake_title">जागते रहो</string>
+    <string name="lock_gesture_title">ताला इशारा</string>
+    <string name="auto_brightness_disabled_title">ऑटो-चमक अक्षम करें</string>
+    <string name="three_screenshot_disabled_title">स्वाइप टू स्क्रीनशॉट अक्षम करें</string>
+    <string name="adb_disabled_title">यूएसबी डिबगिंग अक्षम करें</string>
+    <string name="gamespace_menu_opacity_title">ओवरले मेनू अस्पष्टता स्तर</string>
+    <!-- Notification Mode -->
+    <string name="notification_mode_title">अधिसूचना मोड</string>
+    <string name="notification_mode_hide">नहीं दिखाते</string>
+    <string name="notification_mode_headsup">हेड्स अप के रूप में दिखाएं</string>
+    <string name="notification_mode_reticker">रीटिकर के रूप में दिखाएं</string>
+    <string name="notification_mode_danmaku">दानमाकु के रूप में दिखाएं</string>
+    <!-- Ringer Mode -->
+    <string name="ringer_mode_title">रिंगर मोड</string>
+    <string name="ringer_mode_silent">चुपचाप</string>
+    <string name="ringer_mode_vibrate">कंपन</string>
+    <string name="ringer_mode_normal">सामान्य</string>
+    <string name="ringer_mode_no_change">बदलें नहीं</string>
+    <!-- Game picker -->
+    <string name="game_list_title">पुस्तकालय</string>
+    <string name="game_list_add_title">जोड़ना</string>
+    <string name="app_selector_label">अपना खेल चुनें</string>
+    <string name="app_search_title">खोजें</string>
+    <string name="game_remove_message">क्या आप वाकई अपनी खेल सूची से %1$s हटाना चाहते हैं?</string>
+    <!-- Configure game -->
+    <string name="per_app_title">गेम कॉन्फ़िगर करें</string>
+    <string name="per_app_mode_title">पसंदीदा मोड</string>
+    <string name="per_app_angle_title">कोण का प्रयोग करें (प्रायोगिक)</string>
+    <string name="per_app_angle_summary">देशी GLES ड्राइवरों के बजाय ANGLE रेंडरर का उपयोग करना।\nचेतावनी!! खेल ग्राफिक्स को तोड़ सकता है, सावधानी के साथ प्रयोग करें!</string>
+    <string name="cant_find_angle_pkg">ANGLE आपके सिस्टम पर उपलब्ध नहीं है</string>
+    <string name="per_app_unregister">लायब्रेरी से %1$s निकालें</string>
+    <string name="game_mode_unsupported">असमर्थित</string>
+    <string name="game_mode_standard">स्तर</string>
+    <string name="game_mode_performance">प्रदर्शन</string>
+    <string name="game_mode_battery">बैटरी</string>
+    <!-- Custom seekbar -->
+    <string name="custom_seekbar_value">मान: <xliff:g id="v">%s</xliff:g></string>
+    <string name="custom_seekbar_default_value">डिफ़ॉल्ट रूप से</string>
+    <string name="custom_seekbar_default_value_to_set">डिफ़ॉल्ट मान: <xliff:g id="v">%s</xliff:g>\nसेट करने के लिए लंबा टैप करें</string>
+    <string name="custom_seekbar_default_value_is_set">डिफ़ॉल्ट मान सेट है</string>
+    <!-- Game overlay -->
+    <string name="battery_format">बैटरी: <xliff:g id="percentage" example="100">%1$d%%</xliff:g></string>
+    <string name="memory_format">मेमोरी उपलब्ध: <xliff:g id="availmemory" example="1000">%1$d</xliff:g>\/<xliff:g id="totalmemory" example="5000">%2$d</xliff:g> एमबी</string>
+    <!-- Tiles -->
+    <string name="game_mode_title">तरीका</string>
+    <string name="fps_Info_title">एफपीएस जानकारी</string>
+    <string name="notification_hide">छिपाना</string>
+    <string name="notification_headsup">सचेत</string>
+    <string name="notification_reticker">रीटिकर</string>
+    <string name="notification_danmaku">दानमाकु</string>
+    <string name="state_enabled">सक्षम</string>
+    <string name="state_disabled">असक्षम</string>
+    <string name="in_game_calls_title">इन-गेम कॉल</string>
+    <string name="in_game_calls_no_action">कोई क्रिया नहीं</string>
+    <string name="in_game_calls_auto_answer">स्वत: जवाब</string>
+    <string name="in_game_calls_auto_reject">स्वत: अस्वीकृत</string>
+    <string name="in_game_calls_received_number">%1$sसे कॉल रिसीव की</string>
+    <string name="in_game_calls_rejected_number">%1$sसे अस्वीकृत कॉल</string>
+</resources>
